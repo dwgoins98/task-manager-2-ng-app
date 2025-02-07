@@ -1,0 +1,19 @@
+<header>
+  <h2>My Tasks</h2>
+  <p>
+    <select (change)="onSelectedFilter(filter.value)" #filter>
+      <option value="all">All</option>
+      <option value="completed">Completed</option>
+      <option value="pending">Pending</option>
+      <option value="in-progress">In Progress</option>
+    </select>
+  </p>
+</header>
+
+<ul>
+  @for (task of tasks; track task) {
+  <li>
+    <app-task [task]="task" />
+  </li>
+  }
+</ul>
