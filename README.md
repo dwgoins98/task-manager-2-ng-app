@@ -2,6 +2,33 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
 
+## Overview
+THIS IS AN EXAMPLE FRONT-END USER INTERFACE
+This app was built for educational purposes for training with Angular
+
+TaskManager2NgApp is a task management application designed to help users organize and track their tasks efficiently. The application provides features such as task creation, editing, deletion, and categorization.
+
+
+## File Structure
+
+The project follows a standard Angular project structure. Below is a brief overview of the key files and directories:
+
+- `src/`: Contains the source code of the application.
+    - `app/`: Contains the main application module and components.
+        - `app.component.ts`: The root component of the application.
+        - `app.module.ts`: The root module that declares and imports other modules and components.
+        - `task/`: Contains components related to task management.
+            - `task-list.component.ts`: Displays a list of tasks.
+            - `task-detail.component.ts`: Displays details of a specific task.
+            - `task.service.ts`: Provides task-related services such as fetching and updating tasks.
+    - `assets/`: Contains static assets such as images and styles.
+    - `environments/`: Contains environment-specific configuration files.
+        - `environment.ts`: Configuration for the development environment.
+        - `environment.prod.ts`: Configuration for the production environment.
+- `angular.json`: Configuration file for Angular CLI.
+- `package.json`: Lists the project's dependencies and scripts.
+- `README.md`: Provides information about the project.
+
 ## Development server
 
 To start a local development server, run:
@@ -28,7 +55,7 @@ ng generate --help
 
 ## Building
 
-To build the project run:
+To build the project, run:
 
 ```bash
 ng build

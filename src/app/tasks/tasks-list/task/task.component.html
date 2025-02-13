@@ -10,7 +10,7 @@
     <h3>{{ task().title }}</h3>
     <p>{{ taskStatus() }}</p>
   </header>
-  <p>{{ task().status }}</p>
+  <p>{{ task().description }}</p>
 
   <form (ngSubmit)="onChangeTaskStatus(task().id, status.value)">
     <select #status>
