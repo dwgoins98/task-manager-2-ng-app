@@ -1,7 +1,22 @@
+<!-- 
+
+  This component template displays a list of tasks with a header and a filter dropdown.
+
+-->
+
+<!-- HEADER: -->
 <header>
+  <!-- Contains the title and the filter dropdown. -->
   <h2>My Tasks</h2>
   <p>
+    <!--  Wraps the filter dropdown -->
     <select (change)="onSelectedFilter(filter.value)" #filter>
+      <!-- Dropdown to filter tasks based on their status. 
+      - Event binding to call the onSelectedFilter method when the selected option changes.
+      - #filter: Template reference variable to access the select element.
+      -->
+      
+      <!-- Each filter option -->
       <option value="all">All</option>
       <option value="completed">Completed</option>
       <option value="pending">Pending</option>
@@ -10,10 +25,16 @@
   </p>
 </header>
 
+
+<!-- TASK LIST: -->
 <ul>
+  <!-- Unordered list to display tasks-->
   @for (task of tasks(); track task.id) {
+  <!-- @for Iterates over the tasks array and tracks each task by its id. -->
   <li>
+    <!-- List item for each task -->
     <app-task [task]="task" />
+    <!-- Custom component to display individual task details, with the task object passed as an input property. -->
   </li>
   }
 </ul>
